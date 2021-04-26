@@ -1,9 +1,5 @@
 import { Builder, WebDriver, Capabilities, By } from 'selenium-webdriver';
 
-interface IAssert {
-  equal: (actual: Object, expected: Object) => void;
-}
-
 require('chromedriver');
 const assert: IAssert = require('assert');
 
@@ -14,7 +10,7 @@ capabilities.set('goog:chromeOptions', {
     '--lang=en',
     'disable-infobars',
     '--disable-plugins',
-    //'--headless' // <- use GUI or only console
+    '--headless' // <- use GUI or only console
   ]
 });
 
